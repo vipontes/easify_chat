@@ -1,0 +1,12 @@
+{
+  "api_error": "Erro ao extrair dados do servidor",
+  "home": "Home",
+  "email": "Email",
+  "phone": "Telefone",
+  "password": "Senha",
+  "login": "Login",
+  "forgot_password": "Esqueceu sua senha?",
+  "internal_error": "Ocorreu um erro não identificado. Tente novamente mais tarde.",
+  "internet_connection_error": "Sem conexão de internet.",
+  "try_again": "Tentar novamente"
+}
