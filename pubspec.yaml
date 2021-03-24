@@ -30,6 +30,8 @@ dependencies:
     git:
       url: https://github.com/vipontes/easify_chat_network.git
       ref: master
+#  easify_chat_network:
+#    path: ../easify_chat_network
 
   flutter:
     sdk: flutter
