@@ -1,13 +1,13 @@
 import 'package:easify_chat/model/chat_users.dart';
-import 'package:easify_chat/view/home/widget/conversation_list.dart';
+import 'package:easify_chat/view/home/widget/contact_list.dart';
 import 'package:flutter/material.dart';
 
-class ChatPage extends StatefulWidget {
+class ContactPage extends StatefulWidget {
   @override
-  _ChatPageState createState() => _ChatPageState();
+  _ContactPageState createState() => _ContactPageState();
 }
 
-class _ChatPageState extends State<ChatPage> {
+class _ContactPageState extends State<ContactPage> {
 
   List<ChatUsers> chatUsers = [
     ChatUsers(name: "Jane Russel", messageText: "Awesome Setup", imageURL: "https://randomuser.me/api/portraits/women/1.jpg", time: "Now"),
@@ -19,8 +19,6 @@ class _ChatPageState extends State<ChatPage> {
     ChatUsers(name: "Andrey Jones", messageText: "Can you please share the file?", imageURL: "https://randomuser.me/api/portraits/men/7.jpg", time: "24 Feb"),
     ChatUsers(name: "John Wick", messageText: "How are you?", imageURL: "https://randomuser.me/api/portraits/men/8.jpg", time: "18 Feb"),
   ];
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +34,7 @@ class _ChatPageState extends State<ChatPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("Conversations",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
+                    Text("Contacts",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
                   ],
                 ),
               ),
@@ -47,12 +45,9 @@ class _ChatPageState extends State<ChatPage> {
               padding: EdgeInsets.only(top: 16),
               physics: NeverScrollableScrollPhysics(),
               itemBuilder: (context, index){
-                return ConversationList(
+                return ContactList(
                   name: chatUsers[index].name,
-                  messageText: chatUsers[index].messageText,
                   imageUrl: chatUsers[index].imageURL,
-                  time: chatUsers[index].time,
-                  isMessageRead: (index == 0 || index == 3)?true:false,
                 );
               },
             ),

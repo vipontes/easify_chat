@@ -1,9 +1,8 @@
-import 'package:easify_chat/res/app_theme.dart';
-import 'package:easify_chat/routes/routes.dart';
 import 'package:easify_chat/view/home/pages/chat_page.dart';
+import 'package:easify_chat/view/home/pages/contact_page.dart';
+import 'package:easify_chat/view/home/pages/user_profile_page.dart';
 import 'package:easify_chat/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
-
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,11 +12,26 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   HomeViewModel _viewModel = HomeViewModel();
 
+  int _currentPageIndex = 0;
+  final List<Widget> _pages = [
+    ChatPage(),
+    ContactPage(),
+    UserProfilePage()
+  ];
+
+  void onTabTapped(int index) {
+    setState(() {
+      _currentPageIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ChatPage(),
+      body: _pages[_currentPageIndex],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentPageIndex,
+        onTap: onTabTapped,
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey.shade600,
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.w600),
@@ -29,8 +43,8 @@ class _HomePageState extends State<HomePage> {
             title: Text("Chats"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.group_work),
-            title: Text("Channels"),
+            icon: Icon(Icons.people),
+            title: Text("Contacts"),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box),
