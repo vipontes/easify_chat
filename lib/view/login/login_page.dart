@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
         case ViewState.loading:
           break;
         case ViewState.loaded:
-          _viewModel.saveToken();
+          _viewModel.saveUserData();
           Routes.pushRemoveStack(context, Routes.home);
           break;
         case ViewState.idle:

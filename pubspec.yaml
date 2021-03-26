@@ -16,7 +16,6 @@ dependencies:
   permission_handler: ^5.0.1+1
   shared_preferences: ^0.5.7
   font_awesome_flutter: ^8.2.0
-  moor_flutter: ^3.1.0
   connectivity: ^0.4.6+2
   dartz: ^0.8.6
   equatable: ^0.4.0
@@ -26,12 +25,15 @@ dependencies:
   rxdart: ^0.23.1
   provider: ^3.0.0+1
 
-  easify_chat_network:
-    git:
-      url: https://github.com/vipontes/easify_chat_network.git
-      ref: master
 #  easify_chat_network:
-#    path: ../easify_chat_network
+#    git:
+#      url: https://github.com/vipontes/easify_chat_network.git
+#      ref: master
+  easify_chat_network:
+    path: ../easify_chat_network
+
+  easify_chat_sqlite:
+    path: ../easify_chat_sqlite
 
   flutter:
     sdk: flutter
@@ -41,7 +43,6 @@ dependencies:
   cupertino_icons: ^1.0.0
 
 dev_dependencies:
-  moor_generator: ^3.3.1
   mobx_codegen: ^1.0.3
   build_runner: ^1.9.0
   flutter_test:
