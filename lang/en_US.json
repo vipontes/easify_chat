@@ -8,5 +8,6 @@
   "forgot_password": "Forgot Password?",
   "internal_error": "Unknown internal error. Try again later.",
   "internet_connection_error": "Internet unavailable.",
-  "try_again": "Try again"
+  "try_again": "Try again",
+  "search": "Search..."
 }

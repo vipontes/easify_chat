@@ -8,5 +8,6 @@
   "forgot_password": "Esqueceu sua senha?",
   "internal_error": "Ocorreu um erro não identificado. Tente novamente mais tarde.",
   "internet_connection_error": "Sem conexão de internet.",
-  "try_again": "Tentar novamente"
+  "try_again": "Tentar novamente",
+  "search": "Procurar..."
 }
